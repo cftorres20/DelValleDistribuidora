@@ -1,0 +1,89 @@
+/* Este CSS lo vamos a usar solo para header, footer y main general*/
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url("../fonts/Roboto-Regular.ttf");
+}
+
+* {
+  /* background-color: #ffffff; */
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+.encabezado {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #ffffff;
+}
+
+.encabezado a img {
+  width: 55%; /* Cambia este valor según el tamaño que desees. */
+  height: auto; /* Mantiene la proporción de altura automáticamente */
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.encabezado nav ul {
+  display: flex;
+  margin: 0;
+}
+
+.encabezado nav ul li {
+  margin-left: 20px;
+}
+
+.encabezado nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+/*
+Para definir colores 
+:root {
+  --colourPrimary: #9f3647;
+  --colourSecundary: #181419;
+  --textColour: white;
+  Para usarlo
+  color: var(--textColour);
+}*/
+
+.contenido {
+  min-height: calc(100vh - 270px);
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  padding: 25px;
+  background-color: white;
+}
+
+.pie img {
+  width: auto;
+  height: 150%;
+  opacity: 0.6;
+  padding: 10px;
+}
