@@ -1,0 +1,9 @@
+Para la entrega 2 falta:
+-INDEX:
+*img para promociones de la semana
+*img para hacer la gondola virtual 
+*agregar en section nosotros el mapa 
+
+-Tienda:
+*img para promociones de la semana
+*img de productos de venta
