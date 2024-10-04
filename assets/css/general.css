@@ -88,6 +88,11 @@ Para definir colores
   padding: 10px;
 }
 
+.pie div ul .img-contacto img {
+  width: 45px;
+  height: auto;
+}
+
 /* Edicion del scroll vertical*/
 ::-webkit-scrollbar {
   width: 8px;
