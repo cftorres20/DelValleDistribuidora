@@ -93,6 +93,17 @@ Para definir colores
   height: auto;
 }
 
+.caja-medios,
+.caja-contacto {
+  text-align: center;
+}
+
+.caja-medios ul,
+.caja-contacto ul {
+  display: inline-block;
+  margin: 0 auto;
+}
+
 /* Edicion del scroll vertical*/
 ::-webkit-scrollbar {
   width: 8px;
