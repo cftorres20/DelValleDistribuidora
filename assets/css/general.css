@@ -69,33 +69,37 @@ Para definir colores
   margin-left: 0;
 }
 
+/* ---- FOOTER ---- */
+
 .pie {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   bottom: 0;
-  height: 200px;
+  height: 300px;
   width: 100%;
   color: rgb(0, 0, 0);
   padding: 25px;
   background-color: white;
 }
 
-.pie img {
-  width: auto;
-  height: 150%;
-  opacity: 0.6;
-  padding: 10px;
-}
-
-.pie div ul .img-contacto img {
-  width: 45px;
-  height: auto;
-}
-
 .caja-medios,
 .caja-contacto {
   text-align: center;
+}
+
+.caja-centro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.caja-centro img {
+  width: auto;
+  height: 150px;
+  opacity: 0.5;
+  margin-top: 60px;
 }
 
 .caja-medios ul,
@@ -104,7 +108,24 @@ Para definir colores
   margin: 0 auto;
 }
 
-/* Edicion del scroll vertical*/
+.caja-centro p {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.pie .caja-contacto .img-contacto .img-contacto img {
+  width: 25px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.pie .caja-medios ul li img {
+  margin-top: 10px;
+}
+
+/* --- Edicion del scroll vertical --- */
 ::-webkit-scrollbar {
   width: 8px;
 }
