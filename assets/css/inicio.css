@@ -1,0 +1,21 @@
+.contenido {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.banner {
+  height: 540px;
+  width: 150%;
+  margin-top: 10px;
+  margin-left: -20vw;
+  background-image: url(../image/bannerInicio3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+  background-size: cover;
+
+  position: relative; /* Asegura que el botón se posicione en relación a este contenedor */
+  z-index: 0;
+}
