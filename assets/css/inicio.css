@@ -1,3 +1,12 @@
+:root {
+  --colourPrimary: rgb(242, 198, 36);
+  --colourSecundary: rgb(248, 3, 2);
+  --textColour: black;
+}
+
+/* amarillo rgb(242, 198, 36)
+rojo  rgb(248, 3, 2)*/
+
 .contenido {
   width: 70%;
   margin: 0 auto;
@@ -22,4 +31,58 @@
   font-weight: 100;
   margin-top: 40px;
   margin-bottom: 20px;
+}
+
+.promociones-contenedor {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 270px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 15px;
+  border: 1px solid var(--colourSecundary);
+  border-radius: 15px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+}
+
+.card .producto-imagen {
+  width: 230px;
+  margin: 20px auto;
+}
+
+.card .producto-imagen img {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.card .producto-imagen img:hover {
+  transform: scale(1.1);
+}
+
+.card .producto-info p {
+  font-size: 18px;
+  padding: 0 25px;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  width: 100%;
+}
+
+.card .btn button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--colourPrimary);
+  border: 1px solid var(--colourSecundary);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 0 0 15px 15px;
 }

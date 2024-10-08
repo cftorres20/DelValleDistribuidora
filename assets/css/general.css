@@ -5,6 +5,9 @@
   src: local("Roboto"), url("../fonts/Roboto-Regular.ttf");
 }
 
+/* amarillo rgb(242, 198, 36)
+rojo  rgb(248, 3, 2)*/
+
 * {
   /* background-color: #ffffff; */
   background-color: #ffffff;
