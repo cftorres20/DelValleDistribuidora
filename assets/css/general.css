@@ -56,15 +56,6 @@ ul {
   color: black;
   font-weight: 600;
 }
-/*
-Para definir colores 
-:root {
-  --colourPrimary: #9f3647;
-  --colourSecundary: #181419;
-  --textColour: white;
-  Para usarlo
-  color: var(--textColour);
-}*/
 
 .contenido {
   min-height: calc(100vh - 270px);
@@ -84,17 +75,19 @@ Para definir colores
   color: rgb(0, 0, 0);
   padding: 25px;
   background-color: white;
+  background-color: rgba(242, 197, 36);
 }
 
 .caja-medios,
-.caja-contacto {
+.caja-contacto,
+.caja-centro {
   text-align: center;
+  background-color: transparent;
 }
 
 .caja-centro {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
 }
 
@@ -103,12 +96,19 @@ Para definir colores
   height: 150px;
   opacity: 0.5;
   margin-top: 60px;
+  background-color: transparent;
 }
 
 .caja-medios ul,
 .caja-contacto ul {
   display: inline-block;
   margin: 0 auto;
+  background-color: rgba(242, 197, 36);
+}
+
+.caja-contacto ul li,
+.caja-contacto a {
+  background-color: rgba(242, 197, 36);
 }
 
 .caja-centro p {
@@ -116,16 +116,28 @@ Para definir colores
   text-align: center;
   font-size: 15px;
   opacity: 0.5;
+  background-color: transparent;
 }
 
-.pie .caja-contacto .img-contacto .img-contacto img {
+.img-contacto img {
   width: 25px;
   height: auto;
   margin-top: 10px;
+  background-color: rgba(242, 197, 36);
 }
 
-.pie .caja-medios ul li img {
-  margin-top: 10px;
+.caja-medios p,
+.caja-contacto p {
+  background-color: transparent;
+}
+
+.caja-medios ul li {
+  margin-top: 5px;
+  background-color: rgba(242, 197, 36);
+}
+
+.img-medios img {
+  background-color: rgba(242, 197, 36);
 }
 
 /* --- Edicion del scroll vertical --- */
