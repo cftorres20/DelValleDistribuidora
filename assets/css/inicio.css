@@ -86,3 +86,38 @@ rojo  rgb(248, 3, 2)*/
   font-size: 20px;
   border-radius: 0 0 15px 15px;
 }
+
+/* --------PROMOCIONES BANCARIAS--------- */
+.scroll-contenedor {
+  width: 100%;
+  margin: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+}
+
+.imagenes {
+  display: inline-block;
+  margin: 1.5vw auto; /* Cambiado a vw para hacerlo reactivo */
+}
+
+.imagenes img {
+  width: auto;
+  height: 15vw; /* Cambiado a vw para hacerlo reactivo */
+  margin-right: 1vw; /* Cambiado a vw para hacerlo reactivo */
+  border-radius: 2vw; /* Cambiado a vw para hacerlo reactivo */
+}
+
+/* Edicion para el scroll de clasicos*/
+.scroll-contenedor::-webkit-scrollbar {
+  height: 0.8vw; /* Cambiado a vw para hacerlo reactivo */
+}
+
+.scroll-contenedor::-webkit-scrollbar-thumb {
+  background-color: #f2c524b0;
+  border-radius: 1.2vw; /* Cambiado a vw para hacerlo reactivo */
+}
+
+.scroll-contenedor::-webkit-scrollbar-thumb:hover {
+  background-color: #f2c524d3;
+}
