@@ -108,7 +108,7 @@ rojo  rgb(248, 3, 2)*/
   border-radius: 1vw; /* Cambiado a vw para hacerlo reactivo */
 }
 
-/* Edicion para el scroll de clasicos*/
+/* EDICION SCROLL PARA TARJETAS*/
 .scroll-contenedor::-webkit-scrollbar {
   height: 0.8vw; /* Cambiado a vw para hacerlo reactivo */
 }
@@ -120,4 +120,62 @@ rojo  rgb(248, 3, 2)*/
 
 .scroll-contenedor::-webkit-scrollbar-thumb:hover {
   background-color: #f2c524d3;
+}
+
+/* --------GONDOLA VIRTUAL--------- */
+
+.seccion-gondola {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin: 10vw auto;
+}
+
+.bloque-proyecto {
+  border-radius: 5px;
+  font-weight: bold;
+  position: relative;
+  width: calc(33.33% - 10px);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 1vw;
+}
+
+.bloque-proyecto img {
+  width: 60%;
+  height: auto;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.efecto-imagen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1.5s ease;
+  background-color: rgba(242, 198, 36, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.texto-imagen {
+  color: black;
+  font-size: 2.5vw;
+  text-align: center;
+  background-color: rgba(242, 198, 36, 0.1);
+  padding: 10px;
+}
+
+.bloque-proyecto:hover .efecto-imagen {
+  opacity: 0.8;
 }
