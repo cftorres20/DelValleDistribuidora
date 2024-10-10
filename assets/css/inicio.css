@@ -33,31 +33,56 @@ rojo  rgb(248, 3, 2)*/
   margin-bottom: 20px;
 }
 
+/* --------PROMOCIONES DE LA SEMANA--------- */
+
+.promociones-semana {
+  margin: 10vw auto;
+}
+
 .promociones-contenedor {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  gap: 15px;
+}
+
+.promociones-contenedor::-webkit-scrollbar {
+  height: 0.8vw;
+}
+
+.promociones-contenedor::-webkit-scrollbar-thumb {
+  background-color: #f2c524b0;
+  border-radius: 1.2vw;
+}
+
+.promociones-contenedor::-webkit-scrollbar-thumb:hover {
+  background-color: #f2c524d3;
 }
 
 .card {
-  width: 270px;
+  min-width: 260px;
   overflow: hidden;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 1px solid var(--colourSecundary);
   border-radius: 15px;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card .producto-imagen {
   width: 230px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .card .producto-imagen img {
-  width: 100%;
+  width: auto;
+  height: 150px;
   transition: transform 0.4s ease;
 }
 
@@ -66,9 +91,9 @@ rojo  rgb(248, 3, 2)*/
 }
 
 .card .producto-info p {
-  font-size: 18px;
-  padding: 0 25px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 0 20px;
+  margin-bottom: 5px;
 }
 
 .card .btn {
