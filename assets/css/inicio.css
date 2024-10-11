@@ -154,7 +154,7 @@ rojo  rgb(248, 3, 2)*/
   flex-wrap: wrap;
   gap: 10px;
   justify-content: space-between;
-  margin: 10vw auto;
+  margin: 7vw auto;
 }
 
 .bloque-proyecto {
@@ -204,6 +204,8 @@ rojo  rgb(248, 3, 2)*/
 .bloque-proyecto:hover .efecto-imagen {
   opacity: 0.8;
 }
+
+/* --------SECCION NOSOTROS--------- */
 
 .seccion-nosotros {
   display: flex;
