@@ -51,10 +51,14 @@ ul {
   margin-left: 20px;
 }
 
-.encabezado nav ul li a {
+.enlace-nav {
   text-decoration: none;
   color: black;
   font-weight: 600;
+}
+
+.enlace-nav:hover {
+  color: rgb(248, 3, 2);
 }
 
 .contenido {
