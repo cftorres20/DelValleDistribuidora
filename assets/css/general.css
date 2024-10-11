@@ -26,7 +26,7 @@ ul {
 }
 
 .encabezado {
-  position: fixed; /* Hace que el encabezado permanezca fijo en la parte superior */
+  position: fixed; 
   top: 0;
   left: 0;
   height: 81px;
@@ -41,8 +41,8 @@ ul {
 }
 
 .encabezado a img {
-  width: 55%; /* Cambia este valor según el tamaño que desees. */
-  height: auto; /* Mantiene la proporción de altura automáticamente */
+  width: 55%; 
+  height: auto;
   padding: 5px;
   margin-top: 5px;
 }
