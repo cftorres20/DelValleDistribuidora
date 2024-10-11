@@ -26,13 +26,18 @@ ul {
 }
 
 .encabezado {
-  height: 70px;
+  position: fixed; /* Hace que el encabezado permanezca fijo en la parte superior */
+  top: 0;
+  left: 0;
+  height: 81px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   background-color: #ffffff;
+  z-index: 100;
+  box-shadow: 0 1.5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .encabezado a img {
@@ -62,7 +67,7 @@ ul {
 }
 
 .contenido {
-  min-height: calc(100vh - 270px);
+  min-height: calc(100vh - 381px);
   margin-top: 0;
   margin-left: 0;
 }
