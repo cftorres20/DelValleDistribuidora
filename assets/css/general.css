@@ -26,7 +26,7 @@ ul {
 }
 
 .encabezado {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   height: 81px;
@@ -41,7 +41,7 @@ ul {
 }
 
 .encabezado a img {
-  width: 55%; 
+  width: 55%;
   height: auto;
   padding: 5px;
   margin-top: 5px;
@@ -60,6 +60,7 @@ ul {
   text-decoration: none;
   color: black;
   font-weight: 600;
+  transition: color 0.5s;
 }
 
 .enlace-nav:hover {

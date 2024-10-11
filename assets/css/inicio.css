@@ -124,24 +124,24 @@ rojo  rgb(248, 3, 2)*/
 
 .imagenes {
   display: inline-block;
-  margin: 1.5vw auto; 
+  margin: 1.5vw auto;
 }
 
 .imagenes img {
   width: auto;
-  height: 15vw; 
-  margin-right: 1vw; 
-  border-radius: 1vw; 
+  height: 15vw;
+  margin-right: 1vw;
+  border-radius: 1vw;
 }
 
 /* EDICION SCROLL PARA TARJETAS*/
 .scroll-contenedor::-webkit-scrollbar {
-  height: 0.8vw; 
+  height: 0.8vw;
 }
 
 .scroll-contenedor::-webkit-scrollbar-thumb {
   background-color: #f2c524b0;
-  border-radius: 1.2vw; 
+  border-radius: 1.2vw;
 }
 
 .scroll-contenedor::-webkit-scrollbar-thumb:hover {
