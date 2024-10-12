@@ -67,6 +67,7 @@ rojo  rgb(248, 3, 2)*/
   min-width: 260px;
   overflow: hidden;
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 20px;
   border: 1px solid var(--colourSecundary);
   border-radius: 15px;
@@ -111,6 +112,11 @@ rojo  rgb(248, 3, 2)*/
   cursor: pointer;
   font-size: 20px;
   border-radius: 0 0 15px 15px;
+  transition: background-color 0.8s;
+}
+
+.btn button:hover {
+  background-color: var(--colourSecundary);
 }
 
 /* --------PROMOCIONES BANCARIAS--------- */

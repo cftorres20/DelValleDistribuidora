@@ -1,3 +1,182 @@
+:root {
+  --colourPrimary: rgb(242, 198, 36);
+  --colourSecundary: rgb(248, 3, 2);
+  --textColour: black;
+}
+
 .contenido {
-  margin-top: 100px;
+  margin-top: 10vw;
+}
+
+.distribucion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+/* -------- SECCION DEL MENU -------- */
+
+.menu {
+  width: 15%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.menu h3 {
+  margin-bottom: 1vw;
+  font-weight: 100;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: rgb(121, 120, 120);
+}
+
+/* -------- SECCION DEL MEDIO -------- */
+
+.productos-centro h1 {
+  font-weight: 100;
+}
+
+.productos-centro {
+  width: 70%;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.productos-centro h1 {
+  margin-left: 3.5vw;
+}
+
+.productos-tienda {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.tipo-producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tipo-producto img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+/* -------- SECCION CARRITO -------- */
+
+.carrito {
+  width: 15%;
+  padding: 15px;
+}
+
+.carrito h2 {
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 1vw;
+}
+
+.carrito ul {
+  padding: 0;
+}
+
+.carrito li {
+  margin-bottom: 10px;
+}
+
+.carrito p {
+  font-weight: bold;
+}
+
+/* -------- PROMOCIONES DE LA SEMANA -------- */
+
+.promociones-semana {
+  margin: 6vw auto;
+}
+
+.promociones-semana .titulo {
+  margin-left: 16vw;
+  margin-bottom: 2vw;
+  font-weight: 100;
+}
+
+.promociones-contenedor {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  gap: 15px;
+}
+
+.promociones-contenedor::-webkit-scrollbar {
+  height: 0.8vw;
+}
+
+.promociones-contenedor::-webkit-scrollbar-thumb {
+  background-color: #f2c524b0;
+  border-radius: 1.2vw;
+}
+
+.promociones-contenedor::-webkit-scrollbar-thumb:hover {
+  background-color: #f2c524d3;
+}
+
+.card {
+  min-width: 260px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--colourSecundary);
+  border-radius: 15px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .producto-imagen {
+  width: 230px;
+  margin: 10px auto;
+}
+
+.card .producto-imagen img {
+  width: auto;
+  height: 150px;
+  transition: transform 0.4s ease;
+}
+
+.card .producto-imagen img:hover {
+  transform: scale(1.1);
+}
+
+.card .producto-info p {
+  font-size: 20px;
+  padding: 0 20px;
+  margin-bottom: 5px;
+}
+
+.card .btn {
+  width: 100%;
+}
+
+.card .btn button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--colourPrimary);
+  border: 1px solid var(--colourSecundary);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 0 0 15px 15px;
+  transition: background-color 0.8s;
+}
+
+.btn button:hover {
+  background-color: var(--colourSecundary);
 }
