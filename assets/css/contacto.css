@@ -1,0 +1,113 @@
+.contenido form{
+
+    margin-top: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.contenido input, .contenido textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 1.1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+.contenido input:focus, .contenido textarea:focus {
+    border-color: #f2c524;
+    box-shadow: 0 0 8px rgba(242, 197, 36, 0.3);
+    outline: none;
+}
+
+
+.contenido textarea {
+    resize: none;
+    height: 150px;
+}
+
+
+
+.contenido section h2{
+    margin-top: 80px;
+    margin-left: 100px;
+    text-decoration:underline;
+
+}
+
+.ubicacion{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.contenido p{
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 600px; 
+    text-align: center; 
+    background-color: antiquewhite; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+    font-size: 1.1em; 
+}
+
+
+.boton {
+    text-decoration: none;
+    background-color: #f2c524;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+    box-shadow: 00px 0px 1vw rgba(231, 16, 16, 0.815);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .contenido form {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px;
+    }
+    
+    .contenido input, .contenido textarea {
+        font-size: 1em;
+    }
+    
+    .boton {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
