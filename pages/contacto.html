@@ -27,21 +27,19 @@
 
         <section>
 
-            <!-- las etiquetas br son temporales -->
+            <h1>Contáctanos</h1>
+
             <form action="./contacto.html" method="post">
-                <input type="text" name="nombre" id="id-nombre" placeholder="Ingrese su nombre">
+                <input type="text" name="nombre" id="id-nombre" placeholder="Ingrese su nombre" required>
 
-                <input type="tel" name="telefono" id="id-telefono" placeholder="Ingrese su teléfono">
+                <input type="tel" name="telefono" id="id-telefono" placeholder="Ingrese su teléfono" required>
 
-                <input type="email" name="email" id="id-email" placeholder="Ingrese su email">
+                <input type="email" name="email" id="id-email" placeholder="Ingrese su email" required>
 
-                <textarea name="comentario" id="id-comentario" cols="40" rows="10"
-                    placeholder="Ingrese un comentario"></textarea>
-
+                <textarea name="comentario" id="id-comentario" cols="40" rows="10" placeholder="Ingrese un comentario"
+                    required></textarea>
 
                 <button class="boton" type="submit">Enviar</button>
-
-
 
             </form>
 
