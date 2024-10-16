@@ -86,7 +86,7 @@
   margin-bottom: 10px;
 }
 
-.carrito p {
+.carrito span {
   font-weight: bold;
 }
 
@@ -154,11 +154,26 @@
   transform: scale(1.1);
 }
 
-.card .producto-info p {
+.card .producto-info {
+  padding: 10px 0;
+}
+
+.card .producto-info span {
+  display: block;
+  font-size: 18px;
+  color: #333;
+}
+
+.card .producto-info span:first-child {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* .card .producto-info p {
   font-size: 20px;
   padding: 0 20px;
   margin-bottom: 5px;
-}
+} */
 
 .card .btn {
   width: 100%;

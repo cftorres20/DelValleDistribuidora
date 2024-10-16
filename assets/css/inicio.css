@@ -92,10 +92,20 @@ rojo  rgb(248, 3, 2)*/
   transform: scale(1.1);
 }
 
-.card .producto-info p {
+.card .producto-info {
   font-size: 20px;
   padding: 0 20px;
   margin-bottom: 5px;
+}
+
+.card .producto-info span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card .producto-info span:first-child {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .card .btn {
