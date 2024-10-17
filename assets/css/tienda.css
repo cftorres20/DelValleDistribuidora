@@ -34,6 +34,87 @@
 
 /* -------- SECCION DEL MEDIO -------- */
 
+.productos-centro {
+  width: 70%;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.productos-centro h1 {
+  font-weight: 100;
+  margin-left: 3.5vw;
+  text-align: center;
+}
+
+.productos-tienda {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.tipo-producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.producto-card {
+  width: 200px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.producto-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.producto-precio {
+  font-size: 14px;
+  font-weight: bold;
+  color: #f8c146;
+}
+
+.producto-nombre {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.agregar-carrito {
+  padding: 8px 15px;
+  background-color: #f8c146;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.agregar-carrito:hover {
+  background-color: #f7a10d;
+}
+
+/*
 .productos-centro h1 {
   font-weight: 100;
 }
@@ -64,7 +145,7 @@
   height: 150px;
   margin: 10px;
 }
-
+*/
 /* -------- SECCION CARRITO -------- */
 
 .carrito {
