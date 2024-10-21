@@ -410,6 +410,27 @@
   .menu-burguer:not(:hover) .burguer-productos {
     display: none;
   }
+  /* --------PRODUCTOS VENTA -------- */
+
+  .productos-centro h1{
+    display: flex;
+  }
+
+  .producto-info span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .agregar-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  }
 
   /* --------PROMOCIONES DE LA SEMANA-------- */
   .titulo {

@@ -262,6 +262,10 @@ rojo  rgb(248, 3, 2)*/
 }
 
 @media (max-width: 768px) {
+  .banner {
+    background-image: url(../image/bannerResponsiv.png);
+  }
+
   /* --------PROMOCIONES DE LA SEMANA--------- */
   .titulo {
     font-size: 20px;
@@ -352,6 +356,4 @@ rojo  rgb(248, 3, 2)*/
     padding: 2vw 4vw;
     border-radius: 6px;
   }
-
-  /*FALTA CAMBIAR EL BANNER Y VER COMO ACOMODAR EL FOOTER y EL TAMANO DE LA IMG DEL HEADER*/
 }
