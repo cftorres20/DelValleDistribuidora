@@ -105,6 +105,10 @@ rojo  rgb(248, 3, 2)*/
 
 .card .producto-info span:first-child {
   margin-bottom: 5px;
+}
+
+.card .producto-info span:nth-child(2) {
+  color: var(--colourSecundary);
   font-weight: bold;
 }
 
