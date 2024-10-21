@@ -400,4 +400,47 @@
   .menu-burguer:not(:hover) .burguer-productos {
     display: none;
   }
+
+  /* --------PROMOCIONES DE LA SEMANA-------- */
+  .titulo {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .promociones-contenedor {
+    width: 85%;
+  }
+
+  .card {
+    min-width: 200px;
+  }
+
+  .card .producto-imagen {
+    width: 200px;
+    margin: 10px auto;
+  }
+
+  .card .producto-imagen img {
+    height: 100px;
+  }
+
+  .card .producto-info {
+    font-size: 15px;
+    padding: 0 20px;
+    margin-bottom: 5px;
+  }
+
+  .card .btn button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .promociones-contenedor::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+  }
+
+  .promociones-contenedor::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;
+  }
 }
