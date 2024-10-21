@@ -72,6 +72,11 @@ ul {
   margin-left: 0;
 }
 
+.menu-burguer,
+.carrito-compra {
+  display: none;
+}
+
 /* ---- FOOTER ---- */
 
 .pie {
@@ -164,4 +169,17 @@ ul {
   background-color: #f2c524d3;
 }
 
-
+@media (max-width: 768px) {
+  
+  .encabezado a {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+  
+  .encabezado a img {
+    width: 150px;
+    height: auto;
+  }
+}

@@ -238,3 +238,166 @@
 .btn button:hover {
   background-color: var(--colourSecundary);
 }
+
+/* ------------ MEDIA QUERY ------------ */
+
+@media (max-width: 768px) {
+  .encabezado a {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .encabezado a img {
+    width: 60%;
+    height: auto;
+    margin-left: 50px;
+  }
+
+  .menu-noresponsive {
+    display: none;
+  }
+
+  .carrito,
+  .menu {
+    /* oculta los aside */
+    display: none;
+  }
+
+  .menu-burguer,
+  .carrito-compra {
+    display: flex;
+  }
+
+  .realizar-compra h2 {
+    font-size: 20px;
+  }
+
+  .encabezado {
+    justify-content: space-between;
+  }
+
+  .encabezado nav ul {
+    display: block;
+    width: 100%;
+  }
+
+  .encabezado nav ul li {
+    margin-left: 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .menu-burguer,
+  .carrito-compra {
+    font-size: 25px;
+  }
+
+  .realizar-compra {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .carrito-compra:hover .realizar-compra {
+    display: flex;
+  }
+
+  .realizar-compra:hover {
+    display: flex;
+  }
+
+  .carrito-compra:not(:hover) .realizar-compra {
+    display: none;
+  }
+
+  .nav-productos {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-productos li {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .realizar-compra h2,
+  ul,
+  span,
+  button {
+    width: 100%;
+    text-align: left;
+  }
+
+  .realizar-compra button {
+    padding: 10px;
+    background-color: #f24802;
+    color: white;
+    border: none;
+    text-align: center;
+  }
+
+  .realizar-compra button:hover {
+    background-color: #d63a01;
+  }
+
+  /* --------MENU HAMBURGUESA -------- */
+
+  .menu-burguer {
+    position: relative;
+    display: block;
+  }
+
+  .burguer-productos {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  .burguer-productos h3 {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  .burguer-productos ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .burguer-productos ul li {
+    margin-bottom: 10px;
+  }
+
+  .burguer-productos ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .menu-burguer:hover .burguer-productos {
+    display: block;
+  }
+
+  .menu-burguer:not(:hover) .burguer-productos {
+    display: none;
+  }
+}
