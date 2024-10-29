@@ -217,11 +217,10 @@
   margin-bottom: 5px;
 }
 
-.card .producto-info span:nth-child(2){
-color: var(--colourSecundary);
-font-weight: bold;
+.card .producto-info span:nth-child(2) {
+  color: var(--colourSecundary);
+  font-weight: bold;
 }
-
 
 .card .btn {
   width: 100%;
@@ -372,10 +371,10 @@ font-weight: bold;
 
   /* --------MENU HAMBURGUESA -------- */
 
-  .menu-burguer {
+  /* .menu-burguer {
     position: relative;
     display: block;
-  }
+  } */
 
   .burguer-productos {
     display: none;
@@ -383,7 +382,8 @@ font-weight: bold;
     top: 100%;
     left: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    width: 200px;
+    width: 250px;
+    height: auto;
     padding: 10px;
     z-index: 100;
   }
