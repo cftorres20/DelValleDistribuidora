@@ -13,3 +13,11 @@ export function renderizarCategorias(arrayCategorias, contenedorHTMl) {
 
   contenedorHTMl.innerHTML += contenidoHTML;
 }
+
+export function tituloDinamico(titulo) {
+  let i = 0;
+  setInterval(() => {
+    document.title = titulo[i];
+    i = (i + 1) % titulo.length;
+  }, 3000);
+}
