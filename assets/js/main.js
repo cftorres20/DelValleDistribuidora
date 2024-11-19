@@ -19,7 +19,7 @@ const arregloProductos = arrayProductos.productos;
 renderizarPromocionesInicio(arregloProductos, contenedorPromociones);
 
 //Para el title
-import { titulos } from "./titulos.js";
+import { titulosInicio } from "./titulos.js";
 import { tituloDinamico } from "./funciones.js";
 
-tituloDinamico(titulos);
+tituloDinamico(titulosInicio);

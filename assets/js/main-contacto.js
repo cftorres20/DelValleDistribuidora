@@ -1,4 +1,4 @@
-import { titulos } from "./titulos.js";
+import { titulosContacto } from "./titulos.js";
 import { tituloDinamico } from "./funciones.js";
 
-tituloDinamico(titulos);
+tituloDinamico(titulosContacto);
