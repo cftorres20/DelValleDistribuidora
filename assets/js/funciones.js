@@ -1,4 +1,4 @@
-//Funcion para renderizar las categorias del inicio
+//----Funcion para renderizar las categorias del inicio
 export function renderizarCategorias(arrayCategorias, contenedorHTMl) {
   let contenidoHTML = "";
 
@@ -15,7 +15,7 @@ export function renderizarCategorias(arrayCategorias, contenedorHTMl) {
   contenedorHTMl.innerHTML += contenidoHTML;
 }
 
-//Funcion para modificar el title
+//----Funcion para modificar el title
 export function tituloDinamico(titulo) {
   let i = 0;
   setInterval(() => {
@@ -24,7 +24,7 @@ export function tituloDinamico(titulo) {
   }, 3000);
 }
 
-//Funcion para renderizar promociones del inicio
+//----Funcion para renderizar promociones del inicio
 export function renderizarPromocionesInicio(
   arrayProductos,
   contenedorPromociones
@@ -53,4 +53,50 @@ export function renderizarPromocionesInicio(
   });
 
   contenedorPromociones.innerHTML = contenidoHTML;
+}
+
+//----Funcion para renderizar productos de la tienda
+
+export function renderizarProductosTienda(
+  arrayProductos,
+  contenedorProductosTienda
+) {
+  let contenidoHTML = "";
+  let categoriaActual = null;
+
+  arrayProductos.forEach((producto, index) => {
+    if (producto.idCategoria !== categoriaActual) {
+      if (categoriaActual !== null) {
+        contenidoHTML += `</div>`;
+      }
+
+      categoriaActual = producto.idCategoria;
+
+      contenidoHTML += `<div class="tipo-producto">`;
+    }
+
+    contenidoHTML += `
+                        <div class="producto-card">
+                            <img src= ${producto.imagen} alt="${
+      producto.nombre
+    }"
+                                loading="lazy">
+                            <div class="producto-info">
+                                <span class="producto-nombre">${
+                                  producto.nombre
+                                }</span>
+                                <span class="producto-precio">$ ${producto.precio.toFixed(
+                                  2
+                                )}</span>
+                                <button class="agregar-carrito">Agregar al carrito</button>
+                            </div>
+                        </div>                    
+      `;
+
+    if (index === arrayProductos.length - 1) {
+      contenidoHTML += `</div>`;
+    }
+  });
+
+  contenedorProductosTienda.innerHTML = contenidoHTML;
 }
