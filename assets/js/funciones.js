@@ -37,7 +37,7 @@ export function renderizarPromocionesInicio(
       contenidoHTML += `
       <article class="card">
                     <div class="producto-imagen">
-                        <img src="${producto.imagen}" alt="Harina Cañuelas"
+                        <img src=${producto.imagen} alt=${producto.nombre}
                             loading="lazy">
                     </div>
                     <div class="producto-info">
