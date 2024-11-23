@@ -371,7 +371,7 @@ export const arrayProductos = {
     },
     {
       id: 45,
-      idCategoria: 4,
+      idCategoria: 1,
       nombre: "Arroz Gallo oro 1kg.",
       precio: 3000.0,
       imagen: "../assets/image/gondola/img/al318039-170-170.webp",
