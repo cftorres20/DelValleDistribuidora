@@ -21,12 +21,12 @@ const contenedorProductosTienda = document.getElementById("productos-venta");
 renderizarProductosTienda(arregloProductos, contenedorProductosTienda);
 
 //RENDERIZADO DE LOS PRODUCTOS DE LA TIENDA FILTRADOS POR CATEGORIA
-const numeroCategoria = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const enlaceCategoria = document.querySelectorAll(".categoria-enlace");
 
-numeroCategoria.forEach((idCategoria) => {
-  const enlace = document.getElementById(`categoria-${idCategoria}`);
+enlaceCategoria.forEach((enlace) => {
   enlace.addEventListener("click", (e) => {
     e.preventDefault();
+    const idCategoria = enlace.getAttribute("data-id-categoria");
     renderizarProductoXCategoria(
       idCategoria,
       contenedorProductosTienda,
