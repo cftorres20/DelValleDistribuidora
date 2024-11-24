@@ -34,3 +34,21 @@ enlaceCategoria.forEach((enlace) => {
     );
   });
 });
+
+//FILTRADO DE PRODUCTOS POR CATEGORIA DESDE EL INDEX
+const idCategoriaSeleccionada = localStorage.getItem("categoriaSeleccionada");
+
+const contenedorProductosTiendaBuscado =
+  document.getElementById("productos-venta");
+
+if (idCategoriaSeleccionada) {
+  renderizarProductoXCategoria(
+    idCategoriaSeleccionada,
+    contenedorProductosTiendaBuscado,
+    arregloProductos
+  );
+
+  localStorage.removeItem("categoriaSeleccionada");
+} else {
+  renderizarProductosTienda(arregloProductos, contenedorProductosTienda);
+}

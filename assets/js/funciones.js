@@ -4,7 +4,7 @@ export function renderizarCategorias(arrayCategorias, contenedorHTMl) {
 
   arrayCategorias.forEach((categorias) => {
     contenidoHTML += `
-      <div class="bloque-proyecto">
+      <div class="bloque-proyecto" data-id-categoria=${categorias.id}>
         <img class="imagenTendencia" src="${categorias.imagen}" alt="Sección de ${categorias.categoria}" loading="lazy">
         <div class="efecto-imagen">
           <div class="texto-imagen">${categorias.categoria}</div>
@@ -13,6 +13,15 @@ export function renderizarCategorias(arrayCategorias, contenedorHTMl) {
   });
 
   contenedorHTMl.innerHTML += contenidoHTML;
+
+  const bloques = contenedorHTMl.querySelectorAll(".bloque-proyecto")
+  bloques.forEach((bloque) => {
+    bloque.addEventListener("click", () => {
+      const idCategoria = bloque.getAttribute("data-id-categoria");
+      localStorage.setItem("categoriaSeleccionada", idCategoria);
+      window.location.href = "./tienda/index.html";
+    })
+  })
 }
 
 //----Funcion para modificar el title
