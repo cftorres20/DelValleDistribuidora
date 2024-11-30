@@ -14,14 +14,14 @@ export function renderizarCategorias(arrayCategorias, contenedorHTMl) {
 
   contenedorHTMl.innerHTML += contenidoHTML;
 
-  const bloques = contenedorHTMl.querySelectorAll(".bloque-proyecto")
+  const bloques = contenedorHTMl.querySelectorAll(".bloque-proyecto");
   bloques.forEach((bloque) => {
     bloque.addEventListener("click", () => {
       const idCategoria = bloque.getAttribute("data-id-categoria");
       localStorage.setItem("categoriaSeleccionada", idCategoria);
       window.location.href = "./tienda/index.html";
-    })
-  })
+    });
+  });
 }
 
 //----Funcion para modificar el title
@@ -54,7 +54,7 @@ export function renderizarPromocionesInicio(
                         <span>$${precioPromocion}</span>
                     </div>
                     <div class="btn">
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button">Ver promociones</button>
                     </div>
                 </article>
       `;
