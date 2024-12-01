@@ -1,7 +1,6 @@
 import { titulosTienda } from "./titulos.js";
 import {
   tituloDinamico,
-  renderizarPromocionesInicio,
   renderizarProductosTienda,
   renderizarProductoXCategoria,
   renderizarPromocionesTienda,
