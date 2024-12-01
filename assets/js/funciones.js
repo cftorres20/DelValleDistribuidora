@@ -149,3 +149,35 @@ export function renderizarProductoXCategoria(
     contenedor.innerHTML = contenidoHTML;
   }
 }
+
+
+//---Renderizar promociones de la TIENDA
+export function renderizarPromocionesTienda(
+  arrayProductos,
+  contenedorPromociones
+) {
+  let contenidoHTML = "";
+
+  arrayProductos.forEach((producto) => {
+    if (producto.precio >= 10000) {
+      let precioPromocion = producto.precio - producto.precio * 0.1;
+      contenidoHTML += `
+      <article class="card">
+                    <div class="producto-imagen">
+                        <img src=${producto.imagen} alt=${producto.nombre}
+                            loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <span>${producto.nombre}</span>
+                        <span>$${precioPromocion}</span>
+                    </div>
+                    <div class="btn">
+                      <button type="button"> Agregar al carrito</button>
+                    </div>
+                </article>
+      `;
+    }
+  });
+
+  contenedorPromociones.innerHTML = contenidoHTML;
+}
