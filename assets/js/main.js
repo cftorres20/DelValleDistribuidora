@@ -42,23 +42,3 @@ async function inicializarPagina() {
 
 // Llamar a la función principal para iniciar el proceso de carga y renderizado
 inicializarPagina();
-
-/*
-const contenedorCategorias = document.getElementById("grilla-categorias");
-const cate = categorias.categorias;
-
-renderizarCategorias(cate, contenedorCategorias);
-
-// Renderizar promociones del index
-
-const contenedorPromociones = document.getElementById("promociones-contenedor");
-const arregloProductos = arrayProductos.productos;
-
-renderizarPromocionesInicio(arregloProductos, contenedorPromociones);
-
-//Para el title
-import { titulosInicio } from "./titulos.js";
-import { tituloDinamico } from "./funciones.js";
-
-tituloDinamico(titulosInicio);
-*/
