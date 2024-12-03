@@ -51,7 +51,7 @@ export function renderizarPromocionesInicio(
                     </div>
                     <div class="producto-info">
                         <span>${producto.nombre}</span>
-                        <span>$${precioPromocion}</span>
+                        <span>$${precioPromocion.toFixed(2)}</span>
                     </div>
                     <div class="btn">
                         <button type="button">Ver promociones</button>
@@ -196,7 +196,7 @@ export function renderizarPromocionesTienda(
                     </div>
                     <div class="producto-info">
                         <span>${producto.nombre}</span>
-                        <span>$${precioPromocion}</span>
+                        <span>$${precioPromocion.toFixed(2)}</span>
                     </div>
                     <div class="btn">
                       <button type="button"> Agregar al carrito</button>
