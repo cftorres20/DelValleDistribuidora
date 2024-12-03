@@ -97,7 +97,9 @@ export function renderizarProductosTienda(
                                 <span class="producto-precio">$ ${producto.precio.toFixed(
                                   2
                                 )}</span>
-                                <button class="agregar-carrito">Agregar al carrito</button>
+                                <button class="agregar-carrito" data-id="${
+                                  producto.id
+                                }">Agregar al carrito</button>
                             </div>
                         </div>                    
       `;
@@ -108,6 +110,19 @@ export function renderizarProductosTienda(
   });
 
   contenedorProductosTienda.innerHTML = contenidoHTML;
+
+  //Eventos a boton de Agregar al carrito
+  const botonesCarrito =
+    contenedorProductosTienda.querySelectorAll(".agregar-carrito");
+  botonesCarrito.forEach((boton) => {
+    boton.addEventListener("click", (e) => {
+      const productoId = e.target.dataset.id;
+      const producto = arrayProductos.find(
+        (prod) => prod.id.toString() === productoId
+      );
+      agregarAlCarrito(producto, carritoLista, carritoTotal);
+    });
+  });
 }
 
 //----Filtrar la busqueda de los productos en la tienda
@@ -139,7 +154,9 @@ export function renderizarProductoXCategoria(
                                   <span class="producto-precio">$ ${producto.precio.toFixed(
                                     2
                                   )}</span>
-                                  <button class="agregar-carrito">Agregar al carrito</button>
+                                  <button class="agregar-carrito" data-id="${
+                                    producto.id
+                                  }">Agregar al carrito</button>
                               </div>
                           </div>`;
     });
@@ -147,9 +164,19 @@ export function renderizarProductoXCategoria(
     contenidoHTML += `</div>`;
 
     contenedor.innerHTML = contenidoHTML;
+
+    const botonesCarrito = contenedor.querySelectorAll(".agregar-carrito");
+    botonesCarrito.forEach((boton) => {
+      boton.addEventListener("click", (e) => {
+        const productoId = e.target.dataset.id;
+        const producto = productos.find(
+          (prod) => prod.id.toString() === productoId
+        );
+        agregarAlCarrito(producto, carritoLista, carritoTotal); // Aca se agrega el producto al carrito
+      });
+    });
   }
 }
-
 
 //---Renderizar promociones de la TIENDA
 export function renderizarPromocionesTienda(
@@ -180,4 +207,69 @@ export function renderizarPromocionesTienda(
   });
 
   contenedorPromociones.innerHTML = contenidoHTML;
+}
+
+//--------------Funciones del carrito
+export function agregarAlCarrito(producto, carritoLista, carritoTotal) {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  const productoExiste = carrito.find((prod) => prod.id === producto.id);
+
+  if (productoExiste) {
+    productoExiste.cantidad++;
+  } else {
+    producto.cantidad = 1;
+    carrito.push(producto);
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  actualizarCarrito(carrito, carritoLista, carritoTotal);
+}
+
+export function actualizarCarrito(carrito, carritoLista, carritoTotal) {
+  // Actualizo la lista del carrito
+  carritoLista.innerHTML = "";
+  let total = 0;
+
+  carrito.forEach((prod, index) => {
+    const item = document.createElement("li");
+    item.innerHTML = `
+      <img src="${prod.imagen}" alt="${
+      prod.nombre
+    }" style="width: 50px; height: 50px;">
+      <span>x${prod.cantidad}</span>
+      <span>$${prod.precio.toFixed(2)}</span>
+      <button class="eliminar-carrito" data-id="${prod.id}">Eliminar</button>
+    `;
+    carritoLista.appendChild(item);
+    total += prod.precio * prod.cantidad;
+
+    const botonEliminar = item.querySelector(".eliminar-carrito");
+    botonEliminar.addEventListener("click", () =>
+      eliminarCarrito(prod.id, carrito, carritoLista, carritoTotal)
+    );
+  });
+
+  carritoTotal.textContent = `Total: $${total.toFixed(2)}`;
+}
+
+export function eliminarCarrito(
+  productoId,
+  carrito,
+  carritoLista,
+  carritoTotal
+) {
+  const producto = carrito.find((prod) => prod.id === productoId);
+
+  if (producto.cantidad > 1) {
+    producto.cantidad--;
+  } else {
+    const carritoActualizado = carrito.filter((prod) => prod.id !== productoId);
+    localStorage.setItem("carrito", JSON.stringify(carritoActualizado));
+    actualizarCarrito(carritoActualizado, carritoLista, carritoTotal);
+    return;
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  actualizarCarrito(carrito, carritoLista, carritoTotal);
 }

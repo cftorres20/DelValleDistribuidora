@@ -4,6 +4,7 @@ import {
   renderizarProductosTienda,
   renderizarProductoXCategoria,
   renderizarPromocionesTienda,
+  agregarAlCarrito,
 } from "./funciones.js";
 //import { arrayProductos } from "./catalogo.js";
 
@@ -18,19 +19,33 @@ async function inicializarPagina() {
   //Guardo el arreglo en una constante
   const arregloProductos = productosData.productos;
 
+  const carritoLista = document.getElementById("carrito-lista");
+  const carritoTotal = document.getElementById("carrito-total");
+
   if (arregloProductos) {
     //Renderizo promociones TIENDA
     const contenedorPromociones = document.getElementById(
       "promociones-contenedor"
     );
 
-    renderizarPromocionesTienda(arregloProductos, contenedorPromociones);
-
-    //Renderizo productos TIENDA
     const contenedorProductosTienda =
       document.getElementById("productos-venta");
 
+    renderizarPromocionesTienda(arregloProductos, contenedorPromociones);
     renderizarProductosTienda(arregloProductos, contenedorProductosTienda);
+
+    // Asocio los botones "Agregar al carrito" con la función correspondiente
+    contenedorProductosTienda.addEventListener("click", (e) => {
+      if (e.target.classList.contains("agregar-carrito")) {
+        const productoId = e.target.dataset.id;
+        const producto = arregloProductos.find(
+          (prod) => prod.id.toString() === productoId
+        );
+        if (producto) {
+          agregarAlCarrito(producto, carritoLista, carritoTotal);
+        }
+      }
+    });
 
     //RENDERIZADO DE LOS PRODUCTOS DE LA TIENDA FILTRADOS POR CATEGORIA
 
@@ -72,4 +87,3 @@ async function inicializarPagina() {
 }
 
 inicializarPagina();
-
