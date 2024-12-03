@@ -236,10 +236,10 @@ export function actualizarCarrito(carrito, carritoLista, carritoTotal) {
     item.innerHTML = `
       <img src="${prod.imagen}" alt="${
       prod.nombre
-    }" style="width: 50px; height: 50px;">
-      <span>x${prod.cantidad}</span>
-      <span>$${prod.precio.toFixed(2)}</span>
-      <button class="eliminar-carrito" data-id="${prod.id}">Eliminar</button>
+    }" class = "imagen-producto-carrito">
+      <span class="cantidad-precio-carrito">x${prod.cantidad}</span>
+      <span class="cantidad-precio-carrito">$${prod.precio.toFixed(2)}</span>
+      <button class="eliminar-carrito" data-id="${prod.id}">Quitar</button>
     `;
     carritoLista.appendChild(item);
     total += prod.precio * prod.cantidad;
