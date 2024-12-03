@@ -5,6 +5,7 @@ import {
   renderizarProductoXCategoria,
   renderizarPromocionesTienda,
   agregarAlCarrito,
+  confirmarCompra,
 } from "./funciones.js";
 //import { arrayProductos } from "./catalogo.js";
 
@@ -84,6 +85,10 @@ async function inicializarPagina() {
       renderizarProductosTienda(arregloProductos, contenedorProductosTienda);
     }
   }
+
+  const botonComprar = document.getElementById("boton-comprar");
+
+  botonComprar.addEventListener("click", confirmarCompra);
 }
 
 inicializarPagina();

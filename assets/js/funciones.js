@@ -273,3 +273,90 @@ export function eliminarCarrito(
   localStorage.setItem("carrito", JSON.stringify(carrito));
   actualizarCarrito(carrito, carritoLista, carritoTotal);
 }
+
+//----Boton de confirmar compra
+
+export function confirmarCompra() {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const carritoTotal = document.getElementById("carrito-total");
+
+  if (carrito.length === 0) {
+    mostrarToast("Carrito vacío, agrega productos.", "error");
+    return;
+  }
+
+  const total = carritoTotal.textContent.replace("Total: $", "").trim();
+
+  const confirmar = confirm(
+    `El total de la compra es $${total}. ¿Deseas confirmar?`
+  );
+
+  if (confirmar) {
+    mostrarToast(
+      "¡Compra confirmada!\n Gracias por tu compra, regresa pronto.",
+      "success"
+    );
+
+    localStorage.setItem("carrito", JSON.stringify([]));
+    const carritoLista = document.getElementById("carrito-lista");
+    carritoLista.innerHTML = "";
+    carritoTotal.textContent = "Total: $0.00";
+  } else {
+    mostrarToast("La compra ha sido cancelada.", "warning");
+  }
+}
+
+function mostrarToast(mensaje, tipo = "success") {
+  // Eliminar cualquier toast existente
+  const existingToast = document.getElementById("custom-toast");
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  // Crear elemento toast
+  const toast = document.createElement("div");
+  toast.id = "custom-toast";
+  toast.style.cssText = `
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${
+      tipo === "success"
+        ? "rgb(76, 175, 80)"
+        : tipo === "error"
+        ? "rgb(248, 3, 2)"
+        : "rgb(242, 198, 36)"
+    };
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+    max-width: 300px;
+    width: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    white-space: pre-line;
+    line-height: 1.4;
+  `;
+
+  toast.textContent = mensaje;
+
+  // Añadir al body
+  document.body.appendChild(toast);
+
+  // Animación de entrada
+  setTimeout(() => {
+    toast.style.opacity = "1";
+  }, 10);
+
+  // Eliminar después de 3 segundos
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    setTimeout(() => {
+      document.body.removeChild(toast);
+    }, 300);
+  }, 3500);
+}
