@@ -54,7 +54,9 @@ export function renderizarPromocionesInicio(
                         <span>$${precioPromocion.toFixed(2)}</span>
                     </div>
                     <div class="btn">
-                        <button type="button">Ver promociones</button>
+                        <a href="./tienda/index.html#promociones-semana">
+                            <button type="button"> Ver promociones</button>
+                        </a>
                     </div>
                 </article>
       `;
