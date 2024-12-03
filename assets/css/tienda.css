@@ -159,6 +159,24 @@
   font-weight: bold;
 }
 
+.boton-comprar {
+  background-color: var(--colourSecundary);
+  opacity: 85%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
+
+.boton-comprar:hover {
+  opacity: 70%;
+}
+
 /* -------- PROMOCIONES DE LA SEMANA -------- */
 
 .promociones-semana {
