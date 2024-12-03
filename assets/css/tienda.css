@@ -30,6 +30,11 @@
 .menu ul li a {
   text-decoration: none;
   color: rgb(121, 120, 120);
+  transition: 0.5s;
+}
+
+.menu ul li a:hover {
+  color: var(--colourSecundary);
 }
 
 /* -------- SECCION DEL MEDIO -------- */
