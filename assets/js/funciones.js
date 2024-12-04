@@ -316,7 +316,7 @@ export function confirmarCompra() {
 
   if (confirmar) {
     mostrarToast(
-      "¡Compra confirmada!\n Gracias por tu compra, regresa pronto.",
+      "¡Compra confirmada!\n Gracias, te esperamos pronto.",
       "success"
     );
 
