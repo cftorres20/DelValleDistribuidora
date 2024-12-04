@@ -32,7 +32,13 @@ async function inicializarPagina() {
     const contenedorProductosTienda =
       document.getElementById("productos-venta");
 
-    renderizarPromocionesTienda(arregloProductos, contenedorPromociones);
+    renderizarPromocionesTienda(
+      arregloProductos,
+      contenedorPromociones,
+      carritoLista,
+      carritoTotal,
+      agregarAlCarrito
+    );
     renderizarProductosTienda(arregloProductos, contenedorProductosTienda);
 
     // Asocio los botones "Agregar al carrito" con la función correspondiente

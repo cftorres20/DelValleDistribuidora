@@ -183,7 +183,10 @@ export function renderizarProductoXCategoria(
 //---Renderizar promociones de la TIENDA
 export function renderizarPromocionesTienda(
   arrayProductos,
-  contenedorPromociones
+  contenedorPromociones,
+  carritoLista,
+  carritoTotal,
+  agregarAlCarrito
 ) {
   let contenidoHTML = "";
 
@@ -201,7 +204,9 @@ export function renderizarPromocionesTienda(
                         <span>$${precioPromocion.toFixed(2)}</span>
                     </div>
                     <div class="btn">
-                      <button type="button"> Agregar al carrito</button>
+                      <button class="agregar-carrito-promocion" data-id="${
+                        producto.id
+                      }">Agregar al carrito</button>
                     </div>
                 </article>
       `;
@@ -209,6 +214,22 @@ export function renderizarPromocionesTienda(
   });
 
   contenedorPromociones.innerHTML = contenidoHTML;
+
+  const botonesPromocion = contenedorPromociones.querySelectorAll(
+    ".agregar-carrito-promocion"
+  );
+
+  botonesPromocion.forEach((boton) => {
+    boton.addEventListener("click", (e) => {
+      const productoId = e.target.dataset.id;
+      const producto = arrayProductos.find(
+        (prod) => prod.id.toString() === productoId
+      );
+      if (producto) {
+        agregarAlCarrito(producto, carritoLista, carritoTotal);
+      }
+    });
+  });
 }
 
 //--------------Funciones del carrito
