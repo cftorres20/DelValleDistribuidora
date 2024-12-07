@@ -7,7 +7,6 @@ import {
   agregarAlCarrito,
   confirmarCompra,
 } from "./funciones.js";
-//import { arrayProductos } from "./catalogo.js";
 
 import { cargarJSON } from "./carga-json.js";
 
@@ -22,6 +21,8 @@ async function inicializarPagina() {
 
   const carritoLista = document.getElementById("carrito-lista");
   const carritoTotal = document.getElementById("carrito-total");
+  const navProductos = document.querySelector(".nav-productos");
+  const navTotal = document.getElementById("nav-total");
 
   if (arregloProductos) {
     //Renderizo promociones TIENDA
@@ -37,7 +38,14 @@ async function inicializarPagina() {
       contenedorPromociones,
       carritoLista,
       carritoTotal,
-      agregarAlCarrito
+      (producto) =>
+        agregarAlCarrito(
+          producto,
+          carritoLista,
+          carritoTotal,
+          navProductos,
+          navTotal
+        )
     );
     renderizarProductosTienda(arregloProductos, contenedorProductosTienda);
 
@@ -49,7 +57,13 @@ async function inicializarPagina() {
           (prod) => prod.id.toString() === productoId
         );
         if (producto) {
-          agregarAlCarrito(producto, carritoLista, carritoTotal);
+          agregarAlCarrito(
+            producto,
+            carritoLista,
+            carritoTotal,
+            navProductos,
+            navTotal
+          );
         }
       }
     });
@@ -95,6 +109,18 @@ async function inicializarPagina() {
   const botonComprar = document.getElementById("boton-comprar");
 
   botonComprar.addEventListener("click", confirmarCompra);
+
+  //EVENTO PARA COMPRAR LOS PRODUCTOS DEL CARRITO
+
+  // Para version no responsive
+  document
+    .getElementById("boton-comprar")
+    .addEventListener("click", confirmarCompra);
+
+  // Para version responsive
+  document
+    .getElementById("boton-comprar-responsive")
+    .addEventListener("click", confirmarCompra);
 }
 
 inicializarPagina();

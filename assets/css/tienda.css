@@ -400,24 +400,30 @@
     text-align: left;
   }
 
-  .realizar-compra button {
+  .realizar-compra img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .realizar-compra #span-carrito-responsive {
+    font-size: 18px;
+  }
+
+  .realizar-compra #boton-comprar-responsive {
     padding: 10px;
-    background-color: #f24802;
+    background-color: var(--colourSecundary);
     color: white;
     border: none;
+    border-radius: 5px;
     text-align: center;
   }
 
-  .realizar-compra button:hover {
-    background-color: #d63a01;
+  .eliminar-carrito-responsive {
+    border: none;
+    color: var(--colourSecundary);
   }
 
   /* --------MENU HAMBURGUESA -------- */
-
-  /* .menu-burguer {
-    position: relative;
-    display: block;
-  } */
 
   .burguer-productos {
     display: none;
