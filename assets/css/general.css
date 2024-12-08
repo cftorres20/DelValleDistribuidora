@@ -1,12 +1,7 @@
-/* Este CSS lo vamos a usar solo para header, footer y main general*/
-
 @font-face {
   font-family: "Roboto";
   src: local("Roboto"), url("../fonts/Roboto-Regular.ttf");
 }
-
-/* amarillo rgb(242, 198, 36)
-rojo  rgb(248, 3, 2)*/
 
 * {
   background-color: #ffffff;
@@ -15,18 +10,12 @@ rojo  rgb(248, 3, 2)*/
   box-sizing: border-box;
 }
 
-/* html {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-} */
-
 :root {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  /* paleta */ /* fuentes */
+
   --color-fuente-enlace: rgb(248, 3, 2);
 
-  /* fondo */
   --color-fondo-amarillo: rgba(242, 197, 36);
 }
 

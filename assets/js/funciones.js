@@ -232,8 +232,8 @@ export function agregarAlCarrito(
   actualizarCarritoResponsive(carrito, navProductos, navTotal);
 }
 
+// Actualizo la lista del carrito
 export function actualizarCarrito(carrito, carritoLista, carritoTotal) {
-  // Actualizo la lista del carrito
   carritoLista.innerHTML = "";
   let total = 0;
 
@@ -328,17 +328,14 @@ export function confirmarCompra() {
     0
   );
 
-  // Confirmar compra
   const confirmar = confirm(
     `El total de la compra es $${totalCompra}. ¿Deseas confirmar?`
   );
   if (confirmar) {
     mostrarToast("¡Compra confirmada! Gracias por tu compra.", "success");
 
-    // Limpiar carrito
     localStorage.setItem("carrito", JSON.stringify([]));
 
-    // Actualizar ambas vistas del carrito
     actualizarCarrito(
       [],
       document.getElementById("carrito-lista"),
@@ -355,13 +352,11 @@ export function confirmarCompra() {
 }
 
 function mostrarToast(mensaje, tipo = "success") {
-  // Eliminar cualquier toast existente
   const existingToast = document.getElementById("custom-toast");
   if (existingToast) {
     existingToast.remove();
   }
 
-  // Crear elemento toast
   const toast = document.createElement("div");
   toast.id = "custom-toast";
   toast.style.cssText = `
@@ -392,15 +387,12 @@ function mostrarToast(mensaje, tipo = "success") {
 
   toast.textContent = mensaje;
 
-  // Añadir al body
   document.body.appendChild(toast);
 
-  // Animación de entrada
   setTimeout(() => {
     toast.style.opacity = "1";
   }, 10);
 
-  // Eliminar después de 3 segundos
   setTimeout(() => {
     toast.style.opacity = "0";
     setTimeout(() => {

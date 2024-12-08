@@ -16,7 +16,6 @@ tituloDinamico(titulosTienda);
 async function inicializarPagina() {
   const productosData = await cargarJSON("/assets/json/productos.json");
 
-  //Guardo el arreglo en una constante
   const arregloProductos = productosData.productos;
 
   const carritoLista = document.getElementById("carrito-lista");
@@ -25,7 +24,6 @@ async function inicializarPagina() {
   const navTotal = document.getElementById("nav-total");
 
   if (arregloProductos) {
-    //Renderizo promociones TIENDA
     const contenedorPromociones = document.getElementById(
       "promociones-contenedor"
     );
@@ -49,7 +47,6 @@ async function inicializarPagina() {
     );
     renderizarProductosTienda(arregloProductos, contenedorProductosTienda);
 
-    // Asocio los botones "Agregar al carrito" con la función correspondiente
     contenedorProductosTienda.addEventListener("click", (e) => {
       if (e.target.classList.contains("agregar-carrito")) {
         const productoId = e.target.dataset.id;
@@ -112,12 +109,10 @@ async function inicializarPagina() {
 
   //EVENTO PARA COMPRAR LOS PRODUCTOS DEL CARRITO
 
-  // Para version no responsive
   document
     .getElementById("boton-comprar")
     .addEventListener("click", confirmarCompra);
 
-  // Para version responsive
   document
     .getElementById("boton-comprar-responsive")
     .addEventListener("click", confirmarCompra);
