@@ -400,3 +400,30 @@ function mostrarToast(mensaje, tipo = "success") {
     }, 300);
   }, 3500);
 }
+
+export function enviarFormulario(form, serviceID, templateID) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Crear objeto con los datos del formulario
+    const formData = {
+      nombre: document.getElementById("id-nombre").value,
+      email: document.getElementById("id-email").value,
+      telefono: document.getElementById("id-telefono").value,
+      comentario: document.getElementById("id-comentario").value,
+    };
+
+    // Usar emailjs para enviar el formulario
+    emailjs.send(serviceID, templateID, formData).then(
+      function (response) {
+        console.log("¡Email enviado!", response.status, response.text);
+        alert("¡Mensaje enviado con éxito!");
+        form.reset(); // Limpiar el formulario
+      },
+      function (error) {
+        console.log("Error:", error);
+        alert("Error al enviar el mensaje");
+      }
+    );
+  });
+}

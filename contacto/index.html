@@ -31,7 +31,7 @@
 
             <h1>Contáctanos</h1>
 
-            <form action="./contacto.html" method="post">
+            <form>
                 <input type="text" name="nombre" id="id-nombre" placeholder="Ingrese su nombre" required>
 
                 <input type="tel" name="telefono" id="id-telefono" placeholder="Ingrese su teléfono" required>
@@ -108,6 +108,10 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("2VQbphJmYUnIeWUlR"); // Clave pública de EmailJS
+    </script>
 </body>
 
 </html>
