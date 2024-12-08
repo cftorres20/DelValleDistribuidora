@@ -405,7 +405,6 @@ export function enviarFormulario(form, serviceID, templateID) {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Crear objeto con los datos del formulario
     const formData = {
       nombre: document.getElementById("id-nombre").value,
       email: document.getElementById("id-email").value,
@@ -413,12 +412,11 @@ export function enviarFormulario(form, serviceID, templateID) {
       comentario: document.getElementById("id-comentario").value,
     };
 
-    // Usar emailjs para enviar el formulario
     emailjs.send(serviceID, templateID, formData).then(
       function (response) {
         console.log("¡Email enviado!", response.status, response.text);
         alert("¡Mensaje enviado con éxito!");
-        form.reset(); // Limpiar el formulario
+        form.reset();
       },
       function (error) {
         console.log("Error:", error);
